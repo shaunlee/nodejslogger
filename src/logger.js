@@ -34,7 +34,7 @@ function parseArgs(args) {
     if (e instanceof Error) return e.stack || e.toString();
     if (typeof e === 'object') return JSON.stringify(e);
     return e.toString();
-  }).filter(e => !!e)join(' ');
+  }).filter(e => !!e).join(' ');
 }
 
 const ev = new Emitter;
