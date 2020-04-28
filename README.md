@@ -24,6 +24,10 @@ log.level = 'debug';
 log.stdout = log.stderr = process.stdout;
 ```
 
+## Example
+
+![nodejslogger](example.png)
+
 ## License
 
 Licensed under [MIT](https://github.com/pinojs/pino/blob/master/LICENSE).
