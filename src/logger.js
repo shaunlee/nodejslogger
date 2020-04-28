@@ -28,12 +28,13 @@ function colorize(s, color) {
 
 function parseArgs(args) {
   return args.map(e => {
+    if (e === null || e === undefined) return '';
     if (e instanceof stream.Readable) return '<stream>';
     if (e instanceof Buffer) return '<buffer>';
     if (e instanceof Error) return e.stack || e.toString();
     if (typeof e === 'object') return JSON.stringify(e);
     return e.toString();
-  }).join(' ');
+  }).filter(e => !!e)join(' ');
 }
 
 const ev = new Emitter;
