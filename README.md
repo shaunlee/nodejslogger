@@ -1,9 +1,15 @@
-# Yet another logger for Node.js, since Pino no longer supports multiple arguments. Superfast also.
+# Yet another logger for Node.js
+
+## Install
+
+```
+$ yarn add https://github.com/shaunlee/nodejslogger
+```
 
 ## Usage
 
 ```js
-const log = require('./nodejslogger');
+const log = require('nodejslogger');
 
 log.info('Hello World');
 ```
