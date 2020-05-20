@@ -33,6 +33,7 @@ function parseArgs(args) {
     if (e instanceof Buffer) return '<buffer>';
     if (e instanceof Error) return e.stack || e.toString();
     if (typeof e === 'object') return JSON.stringify(e);
+    if (typeof e === 'string' || typeof e === 'number') return e;
     return e.toString();
   }).filter(e => !!e).join(' ');
 }
