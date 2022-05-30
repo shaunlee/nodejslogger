@@ -57,7 +57,7 @@ LEVELS.forEach(level => (
   module.exports[level] = async (...args) => ev.emit('logging', level, ...args)
 ));
 
-if (!module.parent) {
+if (false) {
   // module.exports.colorize = false;
   // module.exports.level = 'error';
   const max = 10000;
